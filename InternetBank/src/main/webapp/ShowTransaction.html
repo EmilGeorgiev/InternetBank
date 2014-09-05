@@ -1,0 +1,34 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-7">
+            <table class="table table-striped" border="groovy">
+                <caption>All transaction</caption>
+                <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                @Repeat(items=transactions, var="transaction" )
+                <thead>
+                <tr>
+                    <th>${transaction.type}</th>
+                    <th>${transaction.amount}</th>
+                    <th>${transaction.date}</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+</html>
